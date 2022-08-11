@@ -1,16 +1,16 @@
-const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const htmlhint = require('gulp-htmlhint');
-const htmlValidator = require('gulp-w3c-html-validator');
-const bemValidator = require('gulp-html-bem-validator');
+import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import htmlhint from 'gulp-htmlhint';
+import bemValidator from 'gulp-html-bem-validator';
+import { htmlValidator } from 'gulp-w3c-html-validator';
 
-
-module.exports = function html() {
+export default function html() {
   return gulp.src('src/**/*.html')
     .pipe(plumber())
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.failAfterError())
-    .pipe(htmlValidator())
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter())
     .pipe(bemValidator())
     .pipe(gulp.dest('build'))
-}
+};
