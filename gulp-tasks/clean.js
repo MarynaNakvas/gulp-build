@@ -1,7 +1,7 @@
-const del = require('del')
+import { deleteAsync as del } from 'del';
 
-module.exports = function clean(cb) {
+export default function clean(cb) {
   return del('build').then(() => {
     cb()
   })
-}
+};
