@@ -1,6 +1,6 @@
-const gulp = require('gulp')
+import gulp from 'gulp';
 
-module.exports = function fonts() {
+export default function fonts() {
   return gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('build/fonts'))
-}
+};
