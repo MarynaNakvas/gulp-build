@@ -32,7 +32,7 @@ After installation, you need to create in root folder of your project file **gul
 * #### html:
     *required packages:*
     ```sh
-    $ npm install --save-dev gulp-plumber gulp-htmlhint gulp-w3c-html-validator gulp-html-bem-validator htmlhint
+    $ npm install --save-dev gulp-htmlhint gulp-w3c-html-validator gulp-html-bem-validator htmlhint
     ```
     *Short description:* This task takes all files from the folder **src/** with extension *.html*, converts them, and put on the folder **build/**.
 * #### fonts:
