@@ -1,19 +1,20 @@
-const gulp = require('gulp')
+import gulp from 'gulp';
+import browser from 'browser-sync';
 
-const html = require('./html');
-const fonts = require('./fonts');
-const styles = require('./styles');
-const images = require('./images');
-const scripts = require('./scripts');
+import html from './html.js';
+import fonts from './fonts.js';
+import styles from './styles.js';
+import images from './images.js';
+import scripts from './scripts.js';
 
-const server = require('browser-sync').create();
+const server = browser.create();
 
 function readyReload(cb) {
   server.reload()
   cb()
-}
+};
 
-module.exports = function serve(cb) {
+export default function serve(cb) {
     server.init({
         server: 'build',
         notify: false,
@@ -41,4 +42,4 @@ module.exports = function serve(cb) {
     gulp.watch('src/**/*.html', gulp.series(html, readyReload));
 
     return cb()
-}
+};
