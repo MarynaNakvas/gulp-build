@@ -1,8 +1,6 @@
-const gulp = require('gulp');
-const plumber = require('gulp-plumber');
+import gulp from 'gulp';
 
-
-module.exports = function scripts() {
+export default function scripts() {
   return gulp.src('src/js/**/*.js')
     .pipe(gulp.dest('build/js'))
-}
+};
