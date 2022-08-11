@@ -38,6 +38,7 @@
     "gulp-w3c-html-validator": "2.0.1",
     "htmlhint": "0.14.1",
     "husky": "4.2.5",
+    "node-sass": "6.0.0",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4",
     "stylelint-config-standard": "^27.0.0"
